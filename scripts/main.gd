@@ -11,7 +11,7 @@ extends Control
 
 var window = Window.new()
 var dir_data = OS.get_data_dir()
-var dir_user_data = OS.get_user_data_dir()
+var dir_user_data = OS.get_user_data_dir()	
 var dir_editor = ProjectSettings.globalize_path("res://")
 var dir_user = ProjectSettings.globalize_path("user://")
 var path_file_config = ProjectSettings.globalize_path("user://configs.cfg")
@@ -165,7 +165,6 @@ func _on_exit_pressed() -> void:
 
 func make_config():
 	var config = ConfigFile.new()
-	config.set_value("configs", "shell_path", "/bin/bash")
 	config.set_value("configs", "id", -1)
 	config.set_value("configs", "save_location", OS.get_system_dir(OS.SYSTEM_DIR_MUSIC))
 	config.set_value("configs", "file_name", "output")
@@ -192,7 +191,6 @@ func get_config_as_dict():
 	if err != OK:
 		printerr("error: can't load config file")
 		return
-	data["shell_path"] = config.get_value("configs", "shell_path", "/bin/bash")
 	data["id"] = config.get_value("configs", "id", -1)
 	data["save_location"] = config.get_value("configs", "save_location", OS.get_system_dir(OS.SYSTEM_DIR_MUSIC))
 	data["file_name"] = config.get_value("configs", "file_name", "output")
