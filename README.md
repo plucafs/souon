@@ -89,4 +89,4 @@ git clone https://github.com/plucafs/souon
 [⮤ Back to top](#souon)
 
 - Made with [Godot](https://godotengine.org/) 4.3
-- Font JetBrains Mono by [JetBrains](https://www.jetbrains.com/lp/mono/)
+- Font Fantasque sans by [Jany Belluz](https://github.com/belluzj/fantasque-sans)
